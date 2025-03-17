@@ -1,0 +1,94 @@
+/* Контейнер всех вопросов */
+.question-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.question-container h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 32px;
+    color: #333;
+}
+
+/* Один вопрос */
+.question {
+    padding: 20px;
+    margin-bottom: 30px; /* Больше расстояние между вопросами */
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Ставим все элементы вертикально */
+    gap: 16px; /* Расстояние между элементами внутри */
+}
+
+/* Подписи */
+.question label {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Поле ввода текста вопроса */
+.question input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Селект типа вопроса */
+.question select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* Кнопка удаления вопроса (внизу) */
+.question .remove-question {
+    align-self: flex-end; /* Прижать вправо */
+    padding: 10px 18px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px; /* Чуть больше шрифт */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.question .remove-question:hover {
+    background-color: #e63946;
+}
+
+/* Кнопка добавления нового вопроса */
+button[data-addition-question] {
+    display: block;
+    margin: 30px auto;
+    padding: 14px 28px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[data-addition-question]:hover {
+    background-color: #0056b3;
+}

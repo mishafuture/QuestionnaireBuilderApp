@@ -1,10 +1,11 @@
 'use strict';
 
 let path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/frontend/index.js',
+    entry: './src/frontend/scripts/index.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -28,7 +29,19 @@ module.exports = {
                         }]]
                     }
                 }
-            }
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'], // Загрузка CSS
+            },
         ]
-    }
+    },
+    plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'src/assets', to: 'assets' },
+                { from: 'src/frontend/pages', to: 'pages' },
+            ],
+        }),
+    ]
 };
