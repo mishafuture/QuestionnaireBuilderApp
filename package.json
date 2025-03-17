@@ -1,0 +1,23 @@
+{
+  "name": "questionnairebuilderapp",
+  "version": "1.0.0",
+  "description": "A questionnaire site where everyone can create their own test and the ability to take it is implemented",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mishafuture/QuestionnaireBuilderApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mishafuture/QuestionnaireBuilderApp/issues"
+  },
+  "homepage": "https://github.com/mishafuture/QuestionnaireBuilderApp#readme",
+  "devDependencies": {
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
