@@ -7,8 +7,8 @@ export default function menu() {
             <img src="../assets/images/logo.jpg" alt="logo" class="navbar__logo-img">
         </div>
         <ul class="navbar__menu">
-            <li class="navbar__item"><a href="../pages/quiz-catalog.html" class="navbar__link">Quiz catalog</a></li>
-            <li class="navbar__item"><a href="../pages/quiz-builder-page.html" class="navbar__link">Create quiz</a></li>
+            <li class="navbar__item"><a href="/" class="navbar__link">Quiz catalog</a></li>
+            <li class="navbar__item"><a href="/quiz-constructor" class="navbar__link">Create quiz</a></li>
         </ul>
     `;
 
