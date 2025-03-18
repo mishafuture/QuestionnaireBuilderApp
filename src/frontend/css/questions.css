@@ -1,7 +1,6 @@
-/* Контейнер всех вопросов */
 .question-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 30px auto;
     padding: 20px;
     background-color: #ffffff;
@@ -9,7 +8,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Заголовок */
 .question-container h1 {
     text-align: center;
     margin-bottom: 24px;
@@ -17,28 +15,63 @@
     color: #333;
 }
 
-/* Один вопрос */
 .question {
     padding: 20px;
-    margin-bottom: 30px; /* Больше расстояние между вопросами */
+    margin-bottom: 30px;
     border: 2px solid #e0e0e0;
     border-radius: 10px;
     background-color: #f9f9f9;
     position: relative;
     display: flex;
-    flex-direction: column; /* Ставим все элементы вертикально */
-    gap: 16px; /* Расстояние между элементами внутри */
+    flex-direction: column;
+    gap: 16px;
 }
 
-/* Подписи */
-.question label {
+.question-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.question-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.question-item label,
+.label-type {
     font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.small-indent{
+    margin-left: 20px;
+}
+
+.medium-indent{
+    margin-left: 30px;
+}
+
+.big-indent{
+    margin-left: 40px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.question-index {
+    font-weight: bold;
+    font-size: 16px;
     color: #444;
 }
 
-/* Поле ввода текста вопроса */
-.question input[type="text"] {
-    width: 100%;
+.question-item input[type="text"] {
+    flex: 1;
     padding: 10px 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -46,8 +79,13 @@
     box-sizing: border-box;
 }
 
-/* Селект типа вопроса */
-.question select {
+.question-type {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.question-type select {
     width: 100%;
     padding: 10px 12px;
     border: 1px solid #ccc;
@@ -57,25 +95,23 @@
     box-sizing: border-box;
 }
 
-/* Кнопка удаления вопроса (внизу) */
 .question .remove-question {
-    align-self: flex-end; /* Прижать вправо */
+    align-self: flex-end;
     padding: 10px 18px;
     background-color: #ff4d4f;
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 16px; /* Чуть больше шрифт */
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 10px; /* Отступ сверху */
+    margin-top: 10px;
 }
 
 .question .remove-question:hover {
     background-color: #e63946;
 }
 
-/* Кнопка добавления нового вопроса */
 button[data-addition-question] {
     display: block;
     margin: 30px auto;
